@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Montserrat:wght@200;400&display=swap');
+
+#root {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#hero {
+  
+
+  #hero-main {
+    font-family: 'Bondoni Moda', serif;
+    font-style: italic;
+    font-weight: 200;
+  }
+
+  #hero-brands {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    padding: 25px 0;
+  }
+  
+  #hero-bottom {
+    font-size: 20px;
+    color: white;
+
+    padding: 25px 40px;    
+    margin-bottom: 50px;
+
+    background: linear-gradient(180deg, #292929 0%, #020202 100%);
+    background-size: cover;
+  }
+}
+
+#concept {
+  text-align: center;
+  padding: 70px 25px;
+
+  #concept-text {
+    h1 {
+      font-size: 40px;
+      font-family: 'Bondoni Moda', serif;
+      font-style: italic;
+      font-weight: 300;
+    }  
+
+    span {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  
+    p { 
+      font-size: 19px;  // should be 20px but Montserrat != Gotham
+      margin-bottom: 35px;
+    }
+  }
+  
+
+  #concept-btn {
+    border-radius: 0;
+    background: #707073;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 13px 20px;
+  }
+
+}
+
+#concept-img {
+  display: inline-block;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 50px;
+  background-image: url('../public/img.jpg');    
+}
