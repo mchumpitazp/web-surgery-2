@@ -16,7 +16,7 @@ function Concept () {
                     </p>
                 </div>
                 
-                <div className="w-100 d-flex justify-content-start">
+                <div className="w-100 d-flex justify-content-start justify-content-sm-center">
                     <Button id="concept-btn" className="btn">
                         Watch Video
                     </Button>

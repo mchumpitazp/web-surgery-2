@@ -5,7 +5,7 @@
   font-weight: 200;
 }
 
-#header {
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,26 +13,28 @@
 }
 
 #hero {
-  
+  background-color: lightcyan;
 
   #hero-main {
     font-family: 'Bondoni Moda', serif;
     font-style: italic;
     font-weight: 200;
-  }
+    margin-bottom: -48px; // equal to footer total height
 
-  #hero-brands {
-    position: absolute;
-    bottom: 0;
-
-    display: flex;
-    justify-content: space-around;
-
-    width: 100%;
-    padding: 25px 0;
-  }
+    #hero-brands {
+      position: absolute;
+      bottom: 48px; // match with negative margin bottom from #hero-main
   
-  #hero-bottom {
+      display: flex;
+      justify-content: space-around;
+  
+      width: 100%;
+      padding: 25px 0;
+    }
+  }
+}
+
+#hero-bottom {
     font-size: 20px;
     color: white;
 
@@ -42,7 +44,6 @@
     background: linear-gradient(180deg, #292929 0%, #020202 100%);
     background-size: cover;
   }
-}
 
 #concept {
   text-align: center;
@@ -84,4 +85,21 @@
   width: 100%;
   margin-bottom: 50px;
   background-image: url('../public/img.jpg');    
+}
+
+footer {  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  padding: 15px 20px;
+  height: fit-content;
+  background-color: black;
+
+  a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
 }
