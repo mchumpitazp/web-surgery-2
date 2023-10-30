@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Montserrat:wght@200;400&display=swap');
 
+// Custom styling and responsiveness
+h2 { 
+  font-size: 40px;
+  font-family: 'Bondoni Moda', serif;
+  font-style: italic;
+  font-weight: 200;
+}
+
+p  { 
+  font-size: 20px;
+  margin: 0;
+}
+
+.btn-base {
+  font-size: 18px;
+  font-weight: 200;
+  border-radius: 0;
+  padding: 13px 20px;
+  
+  .arrow-right-white {
+    filter: brightness(0) invert(1);
+  }
+}
+
+// Styling by sections
+
 #root {
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
@@ -10,32 +36,62 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  padding: 25px;
+  
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.4s;
+  
+  .navbar-brand { 
+    height: 50px;
+    transition-property: height;
+    transition-duration: 0.25s;
+  }
+  .container-fluid { padding: 0; }
+}
+
+.white-background {
+  background-color: rgba($color: white, $alpha: 0.9);
+  z-index: 10;
+  .navbar-brand { height: 40px; }
+  img { filter: invert(70%);}
 }
 
 #hero {
-  background-color: lightcyan;
+  background-color: burlywood;
 
   #hero-main {
-    font-family: 'Bondoni Moda', serif;
-    font-style: italic;
-    font-weight: 200;
-    margin-bottom: -48px; // equal to footer total height
+    color: white;
+    margin-bottom: -58px; // equal to footer total height
+
+    #hero-slider {
+      .slide {
+        position: absolute;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 1.75s;
+        transition-timing-function: ease;
+      }
+
+      .slide.active {
+        opacity: 1;
+      }
+    }
 
     #hero-brands {
       position: absolute;
-      bottom: 48px; // match with negative margin bottom from #hero-main
+      bottom: 58px; // match with negative margin bottom from #hero-main
   
       display: flex;
       justify-content: space-around;
   
       width: 100%;
-      padding: 25px 0;
+      padding: 25px;
     }
   }
 }
 
 #hero-bottom {
-    font-size: 20px;
     color: white;
 
     padding: 25px 40px;    
@@ -50,13 +106,6 @@ header {
   padding: 70px 25px;
 
   #concept-text {
-    h1 {
-      font-size: 40px;
-      font-family: 'Bondoni Moda', serif;
-      font-style: italic;
-      font-weight: 300;
-    }  
-
     span {
       font-size: 18px;
       text-transform: uppercase;
@@ -67,16 +116,8 @@ header {
       margin-bottom: 35px;
     }
   }
-  
 
-  #concept-btn {
-    border-radius: 0;
-    background: #707073;
-    font-size: 18px;
-    font-weight: 200;
-    padding: 13px 20px;
-  }
-
+  .btn-base { background: #707073; }
 }
 
 #concept-img {
@@ -87,12 +128,46 @@ header {
   background-image: url('../public/img.jpg');    
 }
 
-footer {  
+#doctor {
+  padding-top: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: white;
+  background: linear-gradient(180deg, #292929 0%, black 100%);
+
+  #doctor-img-logo {
+    padding: 25px;
+    padding-top: 0;
+    margin-bottom: 30px;
+  }
+
+  #doctor-img-doctor {
+    padding-bottom: 30px;
+  }
+
+  p { padding-bottom: 35px; }
+
+  #p-smaller { 
+    font-size: 17px;
+    line-height: 32px;
+  }
+
+  .btn-base { background: #707073; }
+
+  #doctor-brands {
+    padding-bottom: 25px;
+    margin-top: 50px;
+
+    span { font-size: 12px; }
+  }
+}
+
+#footer-sticky {  
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  
+
   padding: 15px 20px;
   height: fit-content;
   background-color: black;
@@ -102,4 +177,19 @@ footer {
     color: white;
     text-decoration: none;
   }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 25px;
+  font-size: 14px;
+  line-height: 25px;
+
+  margin-bottom: 48px;
+}
+
+#temp {
+  height: 50px;
 }
