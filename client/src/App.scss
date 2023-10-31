@@ -25,6 +25,9 @@ p  {
 }
 
 // Styling by sections
+body {
+  overflow-x: hidden;
+}
 
 #root {
   font-family: 'Montserrat', sans-serif;
@@ -35,6 +38,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   padding: 25px;
   
@@ -47,25 +51,116 @@ header {
     transition-property: height;
     transition-duration: 0.25s;
   }
+
+  .navbar-collapse {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: calc(100vh - 60px) !important;
+    width: 90vw;
+    z-index: 50;
+    background-color: rgba($color: white, $alpha: 1.0);
+    padding: 70px 40px;   
+
+    .menu {
+      display: block;
+      position: absolute;
+      top: 25px;
+      left: 40px;
+      font-size: 17px;
+      font-weight: 300;
+    }
+
+    .btn-close-container {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+
+      .btn-close {
+        font-size: 20px;
+        opacity: 0.8;
+      }
+    }
+
+    .nav-link { 
+      font-size: 18px;
+      font-weight: 300;
+      color: black;
+      z-index: 50;
+      padding: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  .navbar-collapse.collapsing {
+      right: -90vw;
+      transition: right 0.4s ease;
+  }
+
+  .navbar-collapse.show {
+      right: 0px;
+      transition: right 0.4s ease;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    border: 0;
+
+    .navbar-toggler-icon { 
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(258deg) brightness(104%) contrast(101%);
+    }
+  }
+  .navbar-toggler:focus { box-shadow: none; }
+
   .container-fluid { padding: 0; }
 }
 
 .white-background {
   background-color: rgba($color: white, $alpha: 0.9);
-  z-index: 10;
-  .navbar-brand { height: 40px; }
-  img { filter: invert(70%);}
+  .navbar-brand { 
+    height: 40px;
+    filter: invert(70%);
+  }
+  .navbar-toggler .navbar-toggler-icon { filter: invert(0%); }
 }
 
 #hero {
-  background-color: burlywood;
+  position: relative;
+  height: calc(100vh - 60px);
+  color: white;
+  background-color: rgba($color: black, $alpha: 0.8);
 
-  #hero-main {
-    color: white;
-    margin-bottom: -58px; // equal to footer total height
+    #hero-bg-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
 
-    #hero-slider {
-      .slide {
+      .bg-slide {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+        opacity: 0;
+        transition-property: opacity, transform;
+        transition-duration: 1.5s, 7s;
+        transition-timing-function: ease;
+      }
+
+      .bg-slide.active {
+        opacity: 1;
+        transform: scale(1.1);        
+      }
+    }
+
+    #hero-title-slider {
+      z-index: 1;
+
+      .title-slide {
         position: absolute;
         opacity: 0;
         transition-property: opacity;
@@ -73,14 +168,14 @@ header {
         transition-timing-function: ease;
       }
 
-      .slide.active {
+      .title-slide.active {
         opacity: 1;
       }
     }
 
     #hero-brands {
       position: absolute;
-      bottom: 58px; // match with negative margin bottom from #hero-main
+      bottom: 0;
   
       display: flex;
       justify-content: space-around;
@@ -88,7 +183,17 @@ header {
       width: 100%;
       padding: 25px;
     }
-  }
+  
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba($color: black, $alpha: 0.5);
 }
 
 #hero-bottom {
@@ -168,7 +273,7 @@ header {
   left: 0;
   width: 100%;
 
-  padding: 15px 20px;
+  padding: 16px 20px;
   height: fit-content;
   background-color: black;
 

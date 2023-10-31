@@ -1,20 +1,43 @@
 import React from "react";
+import $ from 'jquery';
 
 function Hero () {
-    const heroSliderRef = React.useRef(null);
     React.useEffect(() => {
         let i = 0;
-        const maxSlides = heroSliderRef.current.childNodes.length - 1;        
-        const sliderAnimation = () => {
-            heroSliderRef.current.children[i].className = 'slide active';     
-            setTimeout(() => {
-                heroSliderRef.current.children[i].className = 'slide';
-                i = (i === maxSlides) ? 0 : i + 1;    
-            }, 5000);
-        };
-        sliderAnimation(0);        
-        setInterval(() => { sliderAnimation(); }, 6000);        
+        $('#hero-bg-slider').children().eq(i).addClass('active');
+        function AnimateOut() {
+            $('#hero-bg-slider').children().eq(i).removeClass('active');
+            setTimeout(AnimateIn, 100);
+        }
+        function AnimateIn() {
+            if (++i >= $('#hero-bg-slider').children().length) {
+                i = 0;
+            }
+            $('#hero-bg-slider').children().eq(i).addClass('active');
+            setTimeout(AnimateOut, 5900);
+        }
+        setTimeout(AnimateOut, 5900);
     }, []);
+
+    React.useEffect(() => {
+        let i = 0;
+        setTimeout(() => {
+            $('#hero-title-slider').children().eq(i).addClass('active');
+        }, 500);
+        
+        function fadeOut() {
+            $('#hero-title-slider').children().eq(i).removeClass('active');
+            setTimeout(fadeIn, 1000);
+        }
+        function fadeIn() {
+            if (++i >= $('#hero-title-slider').children().length) {
+                i = 0;
+            }
+            $('#hero-title-slider').children().eq(i).addClass('active');
+            setTimeout(fadeOut, 5000);
+        }
+        setTimeout(fadeOut, 5000);
+    },[]);
 
     const HeroBrands = () => {
         const brands = ['BRAND', 'BRAND', 'BRAND', 'BRAND'];
@@ -32,18 +55,25 @@ function Hero () {
 
     return (
         <>        
-            <section id="hero">            
-                <div id="hero-main" className="vh-100 d-flex justify-content-center align-items-center">
-                    <div id="hero-slider" ref={heroSliderRef} className="d-flex justify-content-center align-items-center text-center">                        
-                        <h2 className="slide">Atlanta's Premium Plastic Surgeon</h2>
-                        <h2 className="slide">A More Beautiful & Confident You</h2>
-                        <h2 className="slide">Uncompromising Care</h2>
-                        <h2 className="slide">With a Focus on You</h2>
-                    </div>
+            <section id="hero" className="d-flex justify-content-center align-items-center">
+                <div id="hero-bg-slider">
+                    <img className="bg-slide" src="./bg1.jpeg" alt="bg1"/>
+                    <img className="bg-slide" src="./bg2.jpeg" alt="bg2"/>
+                    <img className="bg-slide" src="./bg3.jpeg" alt="bg3"/>
+                    <img className="bg-slide" src="./bg4.jpeg" alt="bg4"/>
+                    <img className="bg-slide" src="./bg5.jpeg" alt="bg5"/>
+                </div>
 
-                    <div id="hero-brands">
-                        <HeroBrands />
-                    </div>
+                <div id="hero-title-slider" className="d-flex justify-content-center align-items-center text-center">                        
+                    <h2 className="title-slide">Atlanta's Premium Plastic Surgeon</h2>
+                    <h2 className="title-slide">Unrivaled Results</h2>
+                    <h2 className="title-slide">A More Beautiful & Confident You</h2>
+                    <h2 className="title-slide">Uncompromising Care</h2>
+                    <h2 className="title-slide">With a Focus on You</h2>
+                </div>
+
+                <div id="hero-brands">
+                    <HeroBrands />
                 </div>
             </section>
 
