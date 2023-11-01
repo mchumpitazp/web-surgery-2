@@ -247,8 +247,7 @@ header {
   }
 
   #procedure-flexy {
-    background-color: black;
-    
+
     .flexy-item {
       position: relative;
       overflow: hidden;      
@@ -319,6 +318,7 @@ header {
   padding-top: 100px;
   padding-left: 25px;
   padding-right: 25px;
+  margin-bottom: 50px;
   color: white;
   background: linear-gradient(180deg, #292929 0%, black 100%);
 
@@ -346,6 +346,21 @@ header {
     margin-top: 50px;
 
     span { font-size: 12px; }
+  }
+}
+
+#options {
+  padding: 0 25px;
+
+  .options-item {
+    margin-bottom: 75px;
+
+    p { 
+      margin-bottom: 25px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+    .btn-base { background: black; }
   }
 }
 

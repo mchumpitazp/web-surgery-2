@@ -1,6 +1,21 @@
 import { Button } from "reactstrap";
 
 function Doctor () {
+
+    const DoctorBrands = () => {
+        const brands = ['IMG', 'IMG', 'IMG', 'IMG', 'IMG', 'IMG', 'IMG'];
+        let delay = -250;
+
+        return brands.map((b, i) => {
+            delay += 250;
+            return (
+                <img src={`./${b}`} alt={b} key={b+i}
+                    data-aos="fade-in" data-aos-delay={delay} 
+                    data-aos-duration={1000} data-aos-offset={-500}/>
+            );            
+        });
+    }
+
     return (
         <section id="doctor">
             <div>
@@ -26,14 +41,7 @@ function Doctor () {
                 </Button>
                 
                 <div id="doctor-brands" className="d-flex justify-content-between">
-                    <span>Img</span>
-                    <span>Img</span>
-                    <span>Img</span>
-                    <span>Img</span>
-                    <span>Img</span>
-                    <span>Img</span>
-                    <span>Img</span>
-                    <span>Img</span>
+                    <DoctorBrands />
                 </div>
             </div>
         </section>

@@ -6,6 +6,7 @@ import Header from "./Header";
 import Concept from "./Concept";
 import Procedure from "./Procedure";
 import Doctor from "./Doctor";
+import Options from "./Options";
 import FooterSticky from "./FooterSticky";
 import Footer from "./Footer";
 
@@ -27,6 +28,7 @@ function Main () {
             <Concept />
             <Procedure />
             <Doctor />
+            <Options />
             <div id="temp"></div>
             <Footer />            
             <FooterSticky />
