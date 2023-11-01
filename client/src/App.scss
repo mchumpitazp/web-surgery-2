@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Montserrat:wght@200;400&display=swap');
 
 // Custom styling and responsiveness
-h2 { 
-  font-size: 40px;
+h1, h2 {
   font-family: 'Bondoni Moda', serif;
   font-style: italic;
   font-weight: 200;
 }
 
+h1 { font-size: 55px; }
+h2 {  font-size: 40px; }
 p  { 
   font-size: 20px;
   margin: 0;
@@ -18,14 +19,14 @@ p  {
   font-weight: 200;
   border-radius: 0;
   padding: 13px 20px;
-  
-  .arrow-right-white {
-    filter: brightness(0) invert(1);
-  }
+}
+
+.arrow-right-white {
+  filter: brightness(0) invert(1);
 }
 
 // Styling by sections
-body {
+html, body {
   overflow-x: hidden;
 }
 
@@ -231,6 +232,87 @@ header {
   width: 100%;
   margin-bottom: 50px;
   background-image: url('../public/img.jpg');    
+}
+
+#procedure {
+
+  #procedure-text {
+    padding: 0 25px;
+    padding-bottom: 25px;
+
+    span {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  #procedure-flexy {
+    background-color: black;
+    
+    .flexy-item {
+      position: relative;
+      overflow: hidden;      
+      box-sizing: border-box;
+      box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+
+      .flexy-item-bg {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 0.4s;
+      }
+
+      .flexy-item-title {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+        color: white;
+
+        opacity: 1;
+        transform: translateY(0);
+        transition-property: transform, opacity;
+        transition-duration: 0.4s, 0.4s;
+      }
+
+      .flexy-item-options {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        background: rgba($color: black, $alpha: 0.5);
+
+        li {
+          color: white;
+          font-size: 24px;
+          padding: 5px 0;
+        }
+      }
+    }
+
+    .flexy-item.transition {
+      .flexy-item-bg {
+        transform: scale(1.1);
+      }
+      .flexy-item-title {
+        opacity: 0;
+        transform: translateY(80px);
+      }
+    }
+
+    .flexy-item * { pointer-events: none; }
+  }
 }
 
 #doctor {

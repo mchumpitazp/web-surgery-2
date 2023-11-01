@@ -8,6 +8,8 @@ function FooterSticky () {
                 <a href="/">
                     Consultation
                 </a>
+                ;&nbsp;&nbsp;
+                <img src="./arrow-right.svg" alt="arrow-right" className="arrow-right-white"/>
         </section>
     );
 }

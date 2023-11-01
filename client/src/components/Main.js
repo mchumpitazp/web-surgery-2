@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import Hero from "./Hero";
 import Header from "./Header";
 import Concept from "./Concept";
+import Procedure from "./Procedure";
 import Doctor from "./Doctor";
 import FooterSticky from "./FooterSticky";
 import Footer from "./Footer";
@@ -24,6 +25,7 @@ function Main () {
             <Header />
             <Hero />
             <Concept />
+            <Procedure />
             <Doctor />
             <div id="temp"></div>
             <Footer />            
