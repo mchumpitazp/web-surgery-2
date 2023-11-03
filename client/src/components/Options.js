@@ -34,7 +34,7 @@ function Options() {
     return(
         <section id="options">
             <OptionsItems />
-        </section>
+        </section>       
     );
 }
 

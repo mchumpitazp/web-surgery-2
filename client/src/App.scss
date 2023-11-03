@@ -46,6 +46,7 @@ header {
   background-color: transparent;
   transition-property: background-color;
   transition-duration: 0.4s;
+  transition-timing-function: ease;
   
   .navbar-brand { 
     height: 50px;
@@ -62,7 +63,8 @@ header {
     width: 90vw;
     z-index: 50;
     background-color: rgba($color: white, $alpha: 1.0);
-    padding: 70px 40px;   
+    padding: 70px 40px;
+    overflow-y: scroll;
 
     .menu {
       display: block;
@@ -92,6 +94,8 @@ header {
       padding: 0;
       padding-bottom: 15px;
     }
+
+    hr { margin: 0; margin-bottom: 15px;}
   }
 
   .navbar-collapse.collapsing {
@@ -115,6 +119,11 @@ header {
   .navbar-toggler:focus { box-shadow: none; }
 
   .container-fluid { padding: 0; }
+}
+
+.menu-white-background {
+  background-color: rgba($color: white, $alpha: 0.9);
+  .navbar-brand { filter: invert(70%); }
 }
 
 .white-background {
@@ -208,10 +217,9 @@ header {
   }
 
 #concept {
-  text-align: center;
-  padding: 70px 25px;
+  #concept-content {
+    padding: 70px 25px;
 
-  #concept-text {
     span {
       font-size: 18px;
       text-transform: uppercase;
@@ -221,17 +229,21 @@ header {
       font-size: 19px;  // should be 20px but Montserrat != Gotham
       margin-bottom: 35px;
     }
-  }
-
-  .btn-base { background: #707073; }
+    .btn-base { background: #707073; }
+  }  
 }
 
-#concept-img {
-  display: inline-block;
+#concept::after {
+  content: "";
+  display: block;
   height: 500px;
-  width: 100%;
+  width: 100vw;
   margin-bottom: 50px;
-  background-image: url('../public/img.jpg');    
+  background-image: url('../public/bg_generic_1.jpeg');
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #procedure {
@@ -361,6 +373,55 @@ header {
       line-height: 30px;
     }
     .btn-base { background: black; }
+  }
+}
+
+#options::after {
+  content: "";
+  display: block;
+  height: 500px;
+  width: 100vw;
+  margin-left: -25px;
+  margin-bottom: 50px;
+  background-image: url('../public/bg_generic_2.jpeg');
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#social-media {
+  height: 300px;
+  background-image: url('../public/bg_social_media.jpeg');
+  background-position-x: 50%;
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 25px;
+
+  #social-media-content {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba($color: black, $alpha: 0.8);
+    color: white;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  #social-media-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    
+    img { 
+      filter: invert(100%);
+      width: 100%;
+    }
   }
 }
 

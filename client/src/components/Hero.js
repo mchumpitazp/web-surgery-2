@@ -57,11 +57,11 @@ function Hero () {
         <>        
             <section id="hero" className="d-flex justify-content-center align-items-center">
                 <div id="hero-bg-slider">
-                    <img className="bg-slide" src="./bg1.jpeg" alt="bg1"/>
-                    <img className="bg-slide" src="./bg2.jpeg" alt="bg2"/>
-                    <img className="bg-slide" src="./bg3.jpeg" alt="bg3"/>
-                    <img className="bg-slide" src="./bg4.jpeg" alt="bg4"/>
-                    <img className="bg-slide" src="./bg5.jpeg" alt="bg5"/>
+                    <img className="bg-slide" src="./bg_hero_1.jpeg" alt="bg_hero_1"/>
+                    <img className="bg-slide" src="./bg_hero_2.jpeg" alt="bg_hero_2"/>
+                    <img className="bg-slide" src="./bg_hero_3.jpeg" alt="bg_hero_3"/>
+                    <img className="bg-slide" src="./bg_hero_4.jpeg" alt="bg_hero_4"/>
+                    <img className="bg-slide" src="./bg_hero_5.jpeg" alt="bg_hero_5"/>
                 </div>
 
                 <div id="hero-title-slider" className="d-flex justify-content-center align-items-center text-center">                        

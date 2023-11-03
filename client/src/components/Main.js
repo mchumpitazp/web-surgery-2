@@ -7,6 +7,7 @@ import Concept from "./Concept";
 import Procedure from "./Procedure";
 import Doctor from "./Doctor";
 import Options from "./Options";
+import SocialMedia from "./SocialMedia";
 import FooterSticky from "./FooterSticky";
 import Footer from "./Footer";
 
@@ -29,6 +30,7 @@ function Main () {
             <Procedure />
             <Doctor />
             <Options />
+            <SocialMedia />
             <div id="temp"></div>
             <Footer />            
             <FooterSticky />
