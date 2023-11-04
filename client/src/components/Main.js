@@ -6,6 +6,8 @@ import Header from "./Header";
 import Concept from "./Concept";
 import Procedure from "./Procedure";
 import Doctor from "./Doctor";
+import Testimonials from "./Testimonionials";
+import Video from "./Video";
 import Options from "./Options";
 import SocialMedia from "./SocialMedia";
 import FooterSticky from "./FooterSticky";
@@ -29,6 +31,8 @@ function Main () {
             <Concept />
             <Procedure />
             <Doctor />
+            <Testimonials />
+            <Video />
             <Options />
             <SocialMedia />
             <div id="temp"></div>
