@@ -533,6 +533,60 @@ header {
   }
 }
 
+#schedule {
+  padding: 25px;
+  padding-bottom: 100px;
+
+  #schedule-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #schedule-form {
+    .col {
+      margin-bottom: 10px;
+
+      input, textarea, select, option {
+        height: 50px;
+        font-size: 15px;
+        font-weight: 300;
+        padding: 0 15px;
+        color: rgba($color: black, $alpha: 0.7);
+
+        border: 1px solid #E1E1E1;
+        border-radius: 0;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+      }
+
+      input:focus, textarea:focus { box-shadow: none; }
+      input::placeholder, textarea::placeholder { color: inherit; }
+
+      textarea { 
+        height: 120px;
+        padding: 10px 15px;
+      }
+
+      select { padding-right: 35px; }
+    }
+
+    .form-check-input {
+      height: 100%;
+      padding: 10px;
+      border-color: rgba($color: black, $alpha: 0.3);
+      border-radius: 5px;
+    }
+    .form-check-input:focus { box-shadow: none; }
+
+    .btn-base {
+      background-color: black;
+      font-size: 16px;
+    }
+  }
+}
+
 #footer-sticky {  
   position: fixed;
   bottom: 0;

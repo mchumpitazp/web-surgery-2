@@ -10,6 +10,8 @@ import Testimonials from "./Testimonionials";
 import Video from "./Video";
 import Options from "./Options";
 import SocialMedia from "./SocialMedia";
+import Schedule from "./Schedule";
+
 import FooterSticky from "./FooterSticky";
 import Footer from "./Footer";
 
@@ -35,7 +37,7 @@ function Main () {
             <Video />
             <Options />
             <SocialMedia />
-            <div id="temp"></div>
+            <Schedule />
             <Footer />            
             <FooterSticky />
         </>
