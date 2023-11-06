@@ -580,6 +580,13 @@ header {
     }
     .form-check-input:focus { box-shadow: none; }
 
+    .form-control.is-invalid,
+    .form-select.is-invalid {
+      border-color: rgba($color: red, $alpha: 0.7);
+      background-color: rgb(248, 215, 218);
+      background: none;
+    }
+
     .btn-base {
       background-color: black;
       font-size: 16px;
