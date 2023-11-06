@@ -1,7 +1,28 @@
-function Footer() {
-    return (
-        <footer>
-            <span>In case you're experiencing visual impairment or any other condition that is protected under the Americans with Disabilities Act or a law akin to it, and you're interested in discussing accommodations to enhance your experience with this website, kindly get in touch with our Accessibility Manager at (404) 882-8044.</span>
+function Footer () {
+    return(
+        <footer className="d-flex flex-column justify-content-between align-items-center gap-4">
+            <div className="d-flex gap-4">
+                <img height={25} src="./facebook.svg" alt="facebook"/>
+                <img height={25} src="./twitter.svg" alt="twitter"/>
+                <img height={25} src="./instagram.svg" alt="instagram"/>
+                <img height={25} src="./youtube.svg" alt="youtube"/>
+            </div>
+
+            <div className="text-center">
+                <p>
+                    Monday - Thursday: 8:30am - 5:00pm 
+                    <br/>
+                    Friday 8:30am - 12pm 
+                    <br/>
+                    (404) 882-8043
+                </p>
+            </div>
+            <div>
+                <p>© 2023 Dr. Nicholas Jones &nbsp;&nbsp;|&nbsp;&nbsp;
+                    All Rights Reserved &nbsp;&nbsp;|&nbsp;&nbsp;
+                    Privacy Policy
+                </p>
+            </div>
         </footer>
     );
 }

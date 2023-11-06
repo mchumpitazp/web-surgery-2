@@ -385,8 +385,8 @@ function ScheduleForm () {
                 </Col>
             </Row>
 
-            <div className="d-flex flex-column flex-lg-row align-items-lg-center">
-                <div className="order-lg-2 mb-4 mb-lg-0">
+            <div className="d-flex flex-column flex-md-row align-items-md-center">
+                <div className="order-md-2 mb-4 mb-md-0">
                     <FormGroup check>
                         <Label for="schedule-form-monthly-emails" check className="pt-1">Opt-in for monthly emails</Label>
                         <Input 
@@ -398,7 +398,7 @@ function ScheduleForm () {
                         />
                     </FormGroup>
                 </div>
-                <div className="order-lg-1 me-0 me-lg-4">
+                <div className="order-md-1 me-0 me-md-4">
                     <Button className="btn-base" type="submit">
                         Schedule Consultation
                         &nbsp;

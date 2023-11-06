@@ -11,9 +11,10 @@ import Video from "./Video";
 import Options from "./Options";
 import SocialMedia from "./SocialMedia";
 import Schedule from "./Schedule";
-
-import FooterSticky from "./FooterSticky";
+import Contact from "./Contact";
 import Footer from "./Footer";
+import FooterSticky from "./FooterSticky";
+import FooterStatement from "./FooterStatement";
 
 function Main () {
     React.useEffect(() => {
@@ -38,7 +39,9 @@ function Main () {
             <Options />
             <SocialMedia />
             <Schedule />
-            <Footer />            
+            <Contact />
+            <Footer />
+            <FooterStatement />            
             <FooterSticky />
         </>
     );

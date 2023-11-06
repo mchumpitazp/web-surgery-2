@@ -26,16 +26,14 @@ function Header () {
     };   
 
     const NavItems = () => data.map((n, i) => {
-        return (
-            <>
-            { i === 2 && <hr/> }
+        return (            
             <NavItem key={i}>
+                { i === 2 && <hr/> }
                 <NavLink href={n.url}>
                     {n.title}
                     { n.withArrow && <img className="ps-2" src="./arrow-right.svg" alt="arrow-right"/> }
                 </NavLink>
             </NavItem>
-            </>
         );
     });
 
