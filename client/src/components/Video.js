@@ -14,11 +14,13 @@ function Video() {
                 <img src="./icon-play.svg" alt="icon-play"/>
             </div>
 
-            <Modal isOpen={modal} toggle={toggle} centered>
+            <Modal id="video-modal" isOpen={modal} toggle={toggle} centered>
                 <button onClick={toggle} type="button" className="btn-close btn-close-white" aria-label="Close"></button>
-                <iframe title="Doctor video" width="100%" height="100%"
-                    src="https://player.vimeo.com/video/400060651?title=0&byline=0&portrait=0&autoplay=1">
-                </iframe>                
+                <div id="video-container">
+                    <iframe title="Doctor video"
+                        src="https://player.vimeo.com/video/400060651?title=0&byline=0&portrait=0&autoplay=1">
+                    </iframe>      
+                </div>                         
             </Modal>
         </section>
     );
