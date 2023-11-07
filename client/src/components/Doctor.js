@@ -17,7 +17,7 @@ function Doctor () {
     }
 
     return (
-        <section id="doctor">
+        <section id="doctor" className="ph50 mb150">
             <div>
                 <img id="doctor-img-logo" src="./logo.svg" alt="logo" className="img-fluid w-100 h-auto"/>
                 <img id="doctor-img-doctor" src="./doctor.jpg" alt="doctor" className="img-fluid w-100 h-auto"/>

@@ -80,10 +80,12 @@ function Procedure () {
 
     return (
         <section id="procedure">
-            <div id="procedure-text" className="d-flex flex-column gap-2 text-center" data-aos="fade-in">
-                <h2>Find your Procedure</h2>
-                <span>Aesthetic Procedures & Non-Surgical Enhancement In Atlanta</span>
-            </div>
+            <div className="ph50 mb50">
+                <div id="procedure-text" className="d-flex flex-column gap-2 text-center" data-aos="fade-in">
+                    <h2>Find your Procedure</h2>
+                    <span>Aesthetic Procedures & Non-Surgical Enhancement In Atlanta</span>
+                </div>
+            </div>            
 
             <div id="procedure-flexy">
                 <FlexyItems />

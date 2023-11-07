@@ -44,11 +44,11 @@ function Testimonials () {
     });
 
     return(
-        <section id="testimonials">
+        <section id="testimonials" className="ph50 mb150">
             <Carousel activeIndex={activeIndex} next={next} previous={previous} dark>
                 {slides}
 
-                <div className="d-flex justify-content-between py-5">
+                <div className="d-flex justify-content-between py-5 py-lg-3">
                     <CarouselControl
                         direction="prev"
                         directionText="Previous"
@@ -69,7 +69,7 @@ function Testimonials () {
                 
             </Carousel>
 
-            <Row xs={1} sm={3}>
+            <Row xs={1} sm={2} md={3} lg={4}>
                 <Col>
                     <img className="img1" src="./testimonial_logo_1.png" alt="testimonial_logo_1"/>
                     <img className="img2" src="./five-stars.svg" alt="five-stars"/>

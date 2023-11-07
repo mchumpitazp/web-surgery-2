@@ -31,10 +31,14 @@ function Options() {
         );
     })
 
-    return(
-        <section id="options">
-            <OptionsItems />
-        </section>       
+    return (
+        <>
+            <section id="options" className="ph50">
+                <OptionsItems />
+            </section>  
+
+            <div id="options-after" className="mb100"></div>
+        </>
     );
 }
 

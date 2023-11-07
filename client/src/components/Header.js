@@ -38,9 +38,9 @@ function Header () {
     });
 
     return (
-        <header>
+        <header className="ph50">
             <Navbar sticky="top" className="p-0 m-0">
-                <NavbarBrand href="/" className="p-0 m-0">
+                <NavbarBrand href="/" className="p-0 m-0 m-xl-auto">
                     <img src="./logo.svg" alt="logo" className="img-fluid h-100"/>
                 </NavbarBrand>
 

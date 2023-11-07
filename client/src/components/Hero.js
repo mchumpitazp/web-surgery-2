@@ -77,7 +77,7 @@ function Hero () {
                 </div>
             </section>
 
-            <section id="hero-bottom" className="d-flex justify-content-center text-center">
+            <section id="hero-bottom" className="mb100 d-flex justify-content-center text-center">
                 <p>We offer post-operative and lymphatic massages</p>
             </section>
         </>

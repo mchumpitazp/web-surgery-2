@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Montserrat:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&family=Montserrat:wght@200;300;400&display=swap');
 
-// Custom styling and responsiveness
+// Custom font sizing
 h1, h2 {
   font-family: 'Bondoni Moda', serif;
   font-style: italic;
@@ -8,15 +8,72 @@ h1, h2 {
 }
 
 h1 { font-size: 55px; }
-h2 {  font-size: 40px; }
+h2 { font-size: 38px; } // Minus 2px 
 p  { 
-  font-size: 20px;
+  font-size: 19px;
   margin: 0;
+}
+
+// Custom classes
+.ph50 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.pv100 {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.pv140 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.mb50  { margin-bottom: 25px; }
+.mb100 { margin-bottom: 50px; }
+.mb150 { margin-bottom: 50px; }
+
+.mw900 {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mw1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .mb150 { margin-bottom: 75px; }
+}
+
+@media (min-width: 960px) {
+  h2 { font-size: 53px; } // Minus 2px 
+  p { font-size: 24px; }
+
+  .ph50 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .pv100 { padding-top: 100px; }
+
+  .pv140 {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  .mb50  { margin-bottom: 50px; }
+  .mb100 { margin-bottom: 100px; }
+  .mb150 { margin-bottom: 150px; }
 }
 
 .btn-base {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: inherit;
   border-radius: 0;
   padding: 13px 20px;
   background-color: #707073;
@@ -37,7 +94,11 @@ html, body {
 
 #root {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
+}
+
+@media (min-width: 960px) {
+  #root { font-weight: 200; }
 }
 
 header {
@@ -53,7 +114,7 @@ header {
   transition-duration: 0.4s;
   transition-timing-function: ease;
   
-  .navbar-brand { 
+  .navbar-brand {
     height: 50px;
     transition-property: height;
     transition-duration: 0.25s;
@@ -100,7 +161,7 @@ header {
       padding-bottom: 15px;
     }
 
-    hr { margin: 0; margin-bottom: 15px;}
+    hr { margin: 0; margin-bottom: 15px; }
   }
 
   .navbar-collapse.collapsing {
@@ -208,14 +269,19 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba($color: black, $alpha: 0.5);
+  background-color: black;
+  opacity: 0.5;
+}
+
+@media (min-width: 960px) {
+  #hero::after {
+    opacity: 0.3;
+  }
 }
 
 #hero-bottom {
     color: white;
-
     padding: 25px 40px;    
-    margin-bottom: 50px;
 
     background: linear-gradient(180deg, #292929 0%, #020202 100%);
     background-size: cover;
@@ -223,26 +289,18 @@ header {
 
 #concept {
   #concept-content {
-    padding: 70px 25px;
-
     span {
       font-size: 18px;
       text-transform: uppercase;
-    }
-  
-    p { 
-      font-size: 19px;  // should be 20px but Montserrat != Gotham
-      margin-bottom: 35px;
-    }
+    }  
+    p { margin-bottom: 20px; }
   }  
 }
 
-#concept::after {
-  content: "";
+#concept-after {
   display: block;
   height: 500px;
   width: 100vw;
-  margin-bottom: 50px;
   background-image: url('../public/bg_generic_1.jpeg');
   background-position-x: 50%;
   background-position-y: 50%;
@@ -251,11 +309,7 @@ header {
 }
 
 #procedure {
-
   #procedure-text {
-    padding: 0 25px;
-    padding-bottom: 25px;
-
     span {
       font-size: 18px;
       text-transform: uppercase;
@@ -263,7 +317,6 @@ header {
   }
 
   #procedure-flexy {
-
     .flexy-item {
       position: relative;
       overflow: hidden;      
@@ -332,9 +385,6 @@ header {
 
 #doctor {
   padding-top: 100px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 50px;
   color: white;
   background: linear-gradient(180deg, #292929 0%, black 100%);
 
@@ -363,19 +413,11 @@ header {
   }
 }
 
-@media (min-width: 480px) {
-  #doctor {
-    margin-bottom: 75px;
-  }
-}
-
 #testimonials {
-  padding: 0 25px;
-  margin-bottom: 50px;
   text-align: center;
 
   .carousel {
-    p { font-size: 24px; }
+    p { font-size: 28px; }
     .carousel-control-prev,
     .carousel-control-next {
       position: relative;
@@ -423,6 +465,12 @@ header {
   }  
 }
 
+@media (min-width: 960px) {
+  #testimonials .row .col {
+    .img1 { max-height: 30px; }
+  }
+}
+
 #video {
   position: relative;
   height: auto;
@@ -433,10 +481,13 @@ header {
   overflow: hidden;
   margin-bottom: 50px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   #video-content {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     text-align: center;
     padding: 25px;
     color: white;
@@ -500,9 +551,13 @@ header {
   background-size: cover;
 }
 
-#options {
-  padding: 0 25px;
+@media (min-width: 960px) {
+  #video {
+    height: 700px;
+  }
+}
 
+#options {
   .options-item {
     margin-bottom: 75px;
 
@@ -515,18 +570,22 @@ header {
   }
 }
 
-#options::after {
-  content: "";
+#options-after {
+  //content: "";
   display: block;
   height: 500px;
   width: 100vw;
-  margin-left: -25px;
-  margin-bottom: 50px;
   background-image: url('../public/bg_generic_2.jpeg');
   background-position-x: 100%;
   background-position-y: 50%;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 960px) {
+  #options-after {
+    height: 600px;
+  }
 }
 
 #social-media {
@@ -589,14 +648,9 @@ header {
 
 
 #schedule {
-  padding: 25px;
-  padding-top: 50px;
-  padding-bottom: 100px;
-
   #schedule-text {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     margin-bottom: 2rem;
   }
 
@@ -666,6 +720,7 @@ header {
     padding: 40px;
 
     #contact-logo {
+      max-height: 70px;
       height: auto;
       width: 100%;
     }
@@ -676,6 +731,15 @@ header {
     }
 
     p { font-size: 14px; }
+  }
+}
+
+@media (min-width: 960px) {
+  #contact {
+    padding: 100px 50px;
+    #contact-content {
+      padding: 50px;
+    }
   }
 }
 
