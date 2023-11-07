@@ -17,7 +17,7 @@ function Footer () {
                     (404) 882-8043
                 </p>
             </div>
-            <div>
+            <div className="text-center">
                 <p>© 2023 Dr. Nicholas Jones &nbsp;&nbsp;|&nbsp;&nbsp;
                     All Rights Reserved &nbsp;&nbsp;|&nbsp;&nbsp;
                     Privacy Policy

@@ -643,6 +643,11 @@ header {
     height: 100%;
     width: 100%;
     padding: 40px;
+
+    #contact-logo {
+      height: auto;
+      width: 100%;
+    }
     
     .btn-base { 
       color: black;
@@ -684,6 +689,8 @@ header {
 footer {
   padding-top: 60px;
   padding-bottom: 80px;
+  padding-left: 25px;
+  padding-right: 25px;
   
   * { font-size: 14px; }
 }

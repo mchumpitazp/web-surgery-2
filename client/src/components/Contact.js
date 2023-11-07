@@ -5,7 +5,7 @@ function Contact () {
     return(
         <section id="contact" data-aos="fade-in">
             <div id="contact-content" className="d-flex flex-column justify-content-between align-items-center gap-4">
-                <img height={70} src="logo.svg" alt="logo"/>
+                <img id="contact-logo" src="logo.svg" alt="logo"/>
                 <span id="contact-phone" style={{fontSize: 28}}>(404) 882-8044</span>
                 <Button className="btn-base align-self-center">   
                     Schedule Consultation
