@@ -1,6 +1,6 @@
 function FooterSticky () {
     return (
-        <section id="footer-sticky" className="d-flex justify-content-center">
+        <section id="footer-sticky" className="d-flex justify-content-center d-lg-none">
                 <a href="/">
                     (404) 882-8043
                 </a>

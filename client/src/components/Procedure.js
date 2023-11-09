@@ -1,9 +1,8 @@
 import React from "react";
 import $ from 'jquery';
-import { List } from "reactstrap";
+import { Col, List, Row } from "reactstrap";
 
 function Procedure () {
-
     // temp data
     const data = [
         {
@@ -28,7 +27,7 @@ function Procedure () {
         $('.flexy-item-options li').attr('data-aos-duration', '400');
     }, []);
 
-    const useOutsideClick = () => {
+   /*  const useOutsideClick = () => {
         const ref = React.useRef(null);
         React.useEffect(() => {
             const handleClick = (e) => {
@@ -41,16 +40,20 @@ function Procedure () {
             return () => { document.removeEventListener('click', handleClick); }
         }, []);
         return ref;
-    }
+    } */
 
-    const handleInsideClick = (e) => {
+    const handleMouseEnter = (e) => {
         if (!$(e.target).hasClass('transition')) {
-            $(e.target).find('li').removeClass('aos-animate').delay(100).queue(function() {
+            $(e.target).find('li').removeClass('aos-animate').delay(200).queue(function() {
                 $(this).addClass('aos-animate').dequeue();
             });
             $(e.target).addClass('transition');
             $(e.target).find('.flexy-item-options').fadeIn(400).css('display', 'flex');
-        }        
+        }
+    }
+    const handleMouseLeave = (e) => {
+        $(e.target).removeClass('transition');
+        $(e.target).find('.flexy-item-options').fadeOut(400);
     }
 
     const FlexyItems = () => {
@@ -64,16 +67,21 @@ function Procedure () {
 
         return data.map((f, i) => {    
             return (
-                // eslint-disable-next-line react-hooks/rules-of-hooks
-                <div className="flexy-item" ref={useOutsideClick()} onClick={handleInsideClick} data-aos="fade-in" key={i}>
-                    <img className="flexy-item-bg" src={f.background_url} alt={f.background_url}/>
-                    <h1 className="flexy-item-title">{f.title}</h1>
-                    <div className="flexy-item-options">
-                        <List type="unstyled" className="m-0">
-                            <FlexyList procedures={f.procedures}/>
-                        </List>
+                <Col className="p-0">
+                    <div key={i} className="flexy-item" data-aos="fade-in"
+                        //onClick={handleInsideClick}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}>
+                        <img className="flexy-item-bg" src={f.background_url} alt={f.background_url}/>
+                        <h1 className="flexy-item-title">{f.title}</h1>
+                        <div className="flexy-item-options">
+                            <List type="unstyled" className="m-0">
+                                <FlexyList procedures={f.procedures}/>
+                            </List>
+                        </div>
                     </div>
-                </div>
+                </Col>
+                
             )
         });
     }
@@ -87,9 +95,9 @@ function Procedure () {
                 </div>
             </div>            
 
-            <div id="procedure-flexy">
+            <Row id="procedure-flexy" xs={1} lg={3}>
                 <FlexyItems />
-            </div>
+            </Row>
         </section>
     );
 }

@@ -40,7 +40,14 @@ function Header () {
     return (
         <header className="ph50">
             <Navbar sticky="top" className="p-0 m-0">
-                <NavbarBrand href="/" className="p-0 m-0 m-xl-auto">
+                <div className="navbar-social-media d-none d-lg-flex gap-4">
+                    <img height={22} src="./facebook.svg" alt="facebook"/>
+                    <img height={22} src="./twitter.svg" alt="twitter"/>
+                    <img height={22} src="./instagram.svg" alt="instagram"/>
+                    <img height={22} src="./youtube.svg" alt="youtube"/>
+                </div>
+
+                <NavbarBrand href="/" className="p-0 m-0 m-lg-auto">
                     <img src="./logo.svg" alt="logo" className="img-fluid h-100"/>
                 </NavbarBrand>
 

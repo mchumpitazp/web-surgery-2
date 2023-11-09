@@ -77,6 +77,13 @@ p  {
   border-radius: 0;
   padding: 13px 20px;
   background-color: #707073;
+  transition: opacity 0.3s ease;
+
+  img { transition: transform 0.3s ease; }
+}
+.btn-base:hover {
+  opacity: 0.7;
+  img { transform: translateX(30%); }
 }
 
 .arrow-right-white {
@@ -113,6 +120,10 @@ header {
   transition-property: background-color;
   transition-duration: 0.4s;
   transition-timing-function: ease;
+
+  .navbar-social-media {
+    img { filter: invert(100%); }
+  }
   
   .navbar-brand {
     height: 50px;
@@ -189,16 +200,82 @@ header {
 
 .menu-white-background {
   background-color: rgba($color: white, $alpha: 0.9);
+  .navbar-social-media {
+    img { filter: invert(20%); }
+  }
   .navbar-brand { filter: invert(70%); }
 }
 
 .white-background {
   background-color: rgba($color: white, $alpha: 0.9);
+  .navbar-social-media {
+    img { filter: invert(20%); }
+  }
   .navbar-brand { 
     height: 40px;
     filter: invert(70%);
   }
   .navbar-toggler .navbar-toggler-icon { filter: invert(0%); }
+}
+
+@media (min-width: 480px) {
+  header {
+    .navbar-collapse {
+      width: 60vw;
+    }
+    .navbar-collapse.collapsing {
+      right: -60vw;
+      transition: right 0.4s ease;
+    }
+    .navbar-collapse.show {
+        right: 0px;
+        transition: right 0.4s ease;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  header {
+    .navbar-collapse {
+      width: 40vw;
+
+      .btn-close-container {
+        top: 40px;
+        right: 50px;
+      }
+    }
+    .navbar-collapse.collapsing {
+      right: -40vw;
+      transition: right 0.4s ease;
+    }
+    .navbar-collapse.show {
+        right: 0px;
+        transition: right 0.4s ease;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    .container-fluid {
+      height: 50px; // simulate to content the navbar-brand
+    }
+    .navbar-brand {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    .navbar-collapse {
+      height: 100vh !important;
+    }
+  }
+
+  .white-background {
+    .container-fluid {
+      height: 40px; // simulate to content the navbar-brand
+    }
+  }
 }
 
 #hero {
@@ -276,6 +353,12 @@ header {
 @media (min-width: 960px) {
   #hero::after {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: 992px) {
+  #hero {
+    height: 100vh;
   }
 }
 
@@ -384,9 +467,10 @@ header {
 }
 
 #doctor {
+  position: relative;
   padding-top: 100px;
   color: white;
-  background: linear-gradient(180deg, #292929 0%, black 100%);
+  background-image: linear-gradient(180deg, #292929 0%, black 100%);
 
   #doctor-img-logo {
     padding: 25px;
@@ -406,10 +490,15 @@ header {
   }
 
   #doctor-brands {
-    padding-bottom: 25px;
-    margin-top: 50px;
-
     span { font-size: 12px; }
+  }
+}
+
+@media (min-width: 992px) {
+  #doctor {
+    background-image: url(../public/doctor_lg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -480,6 +569,7 @@ header {
   background-size: cover;
   overflow: hidden;
   margin-bottom: 50px;
+  cursor: pointer;
 
   display: flex;
   justify-content: center;
@@ -769,6 +859,12 @@ header {
   line-height: 25px;
 
   margin-bottom: 48px;
+}
+
+@media (min-width: 1140px) {
+  #footer-statement {
+    margin-bottom: 0;
+  }
 }
 
 footer {
