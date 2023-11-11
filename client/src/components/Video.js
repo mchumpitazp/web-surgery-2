@@ -7,7 +7,7 @@ function Video() {
     const toggle = () => setModal(!modal);
 
     return(
-        <section id="video" onClick={toggle}>
+        <section id="video" className="mb100" onClick={toggle}>
             <div id="video-content" className="gap-2 gap-lg-4">
                 <h2 className="m-0">Meet Dr. Nicholas Jones</h2>
                 <p className="mb-3">Your Trusted Atlanta Plastic Surgeon</p>

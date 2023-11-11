@@ -19,7 +19,12 @@ function Procedure () {
             title: 'Fillers',
             background_url: './flexy3.jpeg',
             procedures: ['Botox', 'Injectables & Fillers', 'Microdermabrasion', 'Chemical Peels', 'Skin Care', 'Lip Augmentation', 'Skin Tightening']
-        }        
+        },
+        {
+            title: 'Breast',
+            background_url: './flexy4.jpeg',
+            procedures: ['Breast Augmentation', 'Breast Lift', 'Breast Reconstruction', 'Breast Reduction', 'Male Breast Reduction', 'Nipple Reconstruction']
+        }    
     ]
 
     React.useEffect(() => {
@@ -67,8 +72,8 @@ function Procedure () {
 
         return data.map((f, i) => {    
             return (
-                <Col className="p-0">
-                    <div key={i} className="flexy-item" data-aos="fade-in"
+                <Col className="p-0" key={i}>
+                    <div className="flexy-item" data-aos="fade-in"
                         //onClick={handleInsideClick}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}>
@@ -95,7 +100,7 @@ function Procedure () {
                 </div>
             </div>            
 
-            <Row id="procedure-flexy" xs={1} lg={3}>
+            <Row id="procedure-flexy" xs={1} lg={2}>
                 <FlexyItems />
             </Row>
         </section>
