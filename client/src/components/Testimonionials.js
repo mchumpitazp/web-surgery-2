@@ -45,7 +45,7 @@ function Testimonials () {
 
     return(
         <section id="testimonials" className="ph50 mb150">
-            <Carousel activeIndex={activeIndex} next={next} previous={previous} dark>
+            <Carousel interval={false} activeIndex={activeIndex} next={next} previous={previous} dark>
                 {slides}
 
                 <div className="d-flex justify-content-between py-5 py-lg-3">
