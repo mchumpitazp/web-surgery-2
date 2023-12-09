@@ -14,11 +14,11 @@ function Footer () {
                     <br/>
                     Friday 8:30am - 12pm 
                     <br/>
-                    (404) 882-8043
+                    (954) 463-5208
                 </p>
             </div>
             <div className="text-center">
-                <p>© 2023 Dr. Nicholas Jones &nbsp;&nbsp;|&nbsp;&nbsp;
+                <p>© 2023 Dr. Yates and Dr. Zahedi &nbsp;&nbsp;|&nbsp;&nbsp;
                     All Rights Reserved &nbsp;&nbsp;|&nbsp;&nbsp;
                     Privacy Policy
                 </p>

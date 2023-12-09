@@ -9,8 +9,8 @@ function Video() {
     return(
         <section id="video" className="mb100" onClick={toggle}>
             <div id="video-content" className="gap-2 gap-lg-4">
-                <h2 className="m-0">Meet Dr. Nicholas Jones</h2>
-                <p className="mb-3">Your Trusted Atlanta Plastic Surgeon</p>
+                <h2 className="m-0">Meet Dr. Yates and Dr. Zahedi</h2>
+                <p className="mb-3">Your Trusted Florida Plastic Surgeon</p>
                 <img src="./icon-play.svg" alt="icon-play"/>
             </div>
 

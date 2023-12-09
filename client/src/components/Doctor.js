@@ -3,7 +3,7 @@ import { Button, Row, Col } from "reactstrap";
 function Doctor () {
 
     const DoctorBrands = () => {
-        const brands = ['IMG', 'IMG', 'IMG', 'IMG', 'IMG', 'IMG', 'IMG'];
+        const brands = ['brand_1.png', 'brand_2.png', 'brand_3.png', 'brand_4.png'];
         let delay = -250;
 
         return brands.map((b, i) => {
@@ -20,7 +20,10 @@ function Doctor () {
         <section id="doctor" className="mb150 ph50 pt200">
             <Row>
                 <Col xs={12} lg={6} className="offset-lg-6">
-                    <img id="doctor-img-logo" src="./logo.svg" alt="logo" className="img-fluid w-100 h-auto"/>
+                    <div className="text-center">
+                        <img id="doctor-img-logo" src="./logo.png" alt="logo" className="img-fluid vw-20 h-auto"/>
+                    </div>
+
                     <img id="doctor-img-doctor" src="./doctor.jpg" alt="doctor" className="img-fluid w-100 h-auto d-lg-none"/>
 
                     <p>

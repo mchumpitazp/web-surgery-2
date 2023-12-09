@@ -4,16 +4,16 @@ import { Carousel, CarouselItem, CarouselControl, Button, Row, Col } from 'react
 function Testimonials () {
     const data = [
         {
-            first: '“Dr. Jones was very personable and patient as he explained my surgery to me.”',
-            second: 'He is so informative as well as resourceful. We need more doctors that are approachable. He made me feel like he cares not just for me but all of his patients.'
+            first: '“Dr. Yates was very personable and patient as she explained my surgery to me.”',
+            second: 'She is so informative as well as resourceful. We need more doctors that are approachable. She made me feel like she cares not just for me but all of his patients.'
         },
         {
-            first: '“I give Dr. Jones five stars.”',
-            second: 'He\'s a great surgeon, has a great personality and he really cares. He explained everything to me, my husband and he even called me after my surgery.'
+            first: '“I give Dr. Yates five stars.”',
+            second: 'She\'s a great surgeon, has a great personality and she really cares. She explained everything to me, my husband and she even called me after my surgery.'
         },
         {
-            first: '“Dr. Jones was absolutely great.”',
-            second: 'I flew in from out of town, to see Dr. Nicholas Jones, which came Highly recommended by a friend. I’m certainly pleased with Dr. Nicholas Jones. I will follow him wherever he goes! Great Spirit surgeon, great personality!'
+            first: '“Dr. Yates was absolutely great.”',
+            second: 'I flew in from out of town, to see Dr. Nicholas Yates, which came Highly recommended by a friend. I’m certainly pleased with Dr. Nicholas Yates. I will follow him wsherever she goes! Great Spirit surgeon, great personality!'
         }
     ]
 

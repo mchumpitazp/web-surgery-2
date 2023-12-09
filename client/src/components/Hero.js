@@ -40,13 +40,13 @@ function Hero () {
     },[]);
 
     const HeroBrands = () => {
-        const brands = ['BRAND', 'BRAND', 'BRAND', 'BRAND'];
+        const brands = ['brand_1.png', 'brand_2.png', 'brand_3.png', 'brand_4.png'];
         let delay = 0;
 
         return brands.map((b, i) => {
             delay += 300;
             return (
-                <img src={`./${b}`} alt={b} key={b+i}
+                <img src={`./${b}`} alt={b} key={b+i} className="hero-brand"
                     data-aos="fade-in" data-aos-delay={delay} 
                     data-aos-duration={1000} data-aos-offset={-500}/>
             );            
@@ -65,11 +65,11 @@ function Hero () {
                 </div>
 
                 <div id="hero-title-slider" className="d-flex justify-content-center align-items-center text-center">                        
-                    <h2 className="title-slide">Atlanta's Premium Plastic Surgeon</h2>
-                    <h2 className="title-slide">Unrivaled Results</h2>
-                    <h2 className="title-slide">A More Beautiful & Confident You</h2>
-                    <h2 className="title-slide">Uncompromising Care</h2>
-                    <h2 className="title-slide">With a Focus on You</h2>
+                    <h2 className="title-slide">Dr. Yates and Dr. Zahedi Plastic Surgery</h2>                        
+                    <h2 className="title-slide">Your trusted Florida's Plastic Surgeon</h2>
+                    <h2 className="title-slide">Commited to Excellence</h2>
+                    <h2 className="title-slide">Unparalleled Surgical Experience</h2>
+                    <h2 className="title-slide">Personalized Patient Care</h2>
                 </div>
 
                 <div id="hero-brands">

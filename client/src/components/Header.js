@@ -3,7 +3,7 @@ import $ from 'jquery';
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavLink, NavItem } from "reactstrap";
 
 function Header () {
-    const data = [ { title: 'Consultation', url: '/', withArrow: false }, { title: '(404) 882-8043', url: '/', withArrow: false }, { title: 'Body', url: '/', withArrow: true }, { title: 'Breast', url: '/', withArrow: true }, { title: 'Face', url: '/', withArrow: true }, { title: 'Non-Surgical', url: '/', withArrow: true }, { title: 'Meet Dr. Jones', url: '/', withArrow: false }, { title: 'Community Outsearch', url: '/', withArrow: false }, { title: 'Gallery', url: '/', withArrow: false }, { title: 'Press', url: '/', withArrow: false }, { title: 'Videos', url: '/', withArrow: false }];
+    const data = [ { title: 'Consultation', url: '/', withArrow: false }, { title: '(954) 463-5208', url: '/', withArrow: false }, { title: 'Body', url: '/', withArrow: true }, { title: 'Breast', url: '/', withArrow: true }, { title: 'Face', url: '/', withArrow: true }, { title: 'Non-Surgical', url: '/', withArrow: true }, { title: 'Meet Dr. Jones', url: '/', withArrow: false }, { title: 'Before and Afters', url: '/', withArrow: false }, { title: 'Gallery', url: '/', withArrow: false }, { title: 'Press', url: '/', withArrow: false }, { title: 'Videos', url: '/', withArrow: false }];
 
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -48,7 +48,7 @@ function Header () {
                 </div>
 
                 <NavbarBrand href="/" className="p-0 m-0 m-lg-auto">
-                    <img src="./logo.svg" alt="logo" className="img-fluid h-100"/>
+                    <img src="./logo.png" alt="logo" className="img-fluid h-100"/>
                 </NavbarBrand>
 
                 <NavbarToggler onClick={toggle} />

@@ -128,9 +128,10 @@ header {
   }
   
   .navbar-brand {
-    height: 50px;
+    height: 80px;
     transition-property: height;
     transition-duration: 0.25s;
+    filter: invert(100%);
   }
 
   .navbar-collapse {
@@ -205,7 +206,7 @@ header {
   .navbar-social-media {
     img { filter: invert(20%); }
   }
-  .navbar-brand { filter: invert(70%); }
+  .navbar-brand { filter: invert(10%); }
 }
 
 .white-background {
@@ -214,8 +215,8 @@ header {
     img { filter: invert(20%); }
   }
   .navbar-brand { 
-    height: 40px;
-    filter: invert(70%);
+    height: 50px;
+    filter: invert(10%);
   }
   .navbar-toggler .navbar-toggler-icon { filter: invert(0%); }
 }
@@ -260,7 +261,7 @@ header {
 @media (min-width: 992px) {
   header {
     .container-fluid {
-      height: 50px; // simulate to content the navbar-brand
+      height: 80px; // simulate to content the navbar-brand
     }
     .navbar-brand {
       position: absolute;
@@ -275,7 +276,7 @@ header {
 
   .white-background {
     .container-fluid {
-      height: 40px; // simulate to content the navbar-brand
+      height: 50px; // simulate to content the navbar-brand
     }
   }
 }
@@ -337,6 +338,11 @@ header {
   
       width: 100%;
       padding: 25px;
+      
+      .hero-brand {        
+        width: auto;
+        height: 40px;
+      }
     }
   
 }
@@ -352,15 +358,37 @@ header {
   opacity: 0.5;
 }
 
+@media (min-width: 480px) {
+  #hero {
+    #hero-brands{
+      .hero-brand {     
+        height: 60px;
+      }
+    }
+  }
+}
+
 @media (min-width: 960px) {
   #hero::after {
     opacity: 0.3;
+  }
+
+  #hero {
+    #hero-brands{
+      .hero-brand {     
+        height: 80px;
+      }
+    }
   }
 }
 
 @media (min-width: 992px) {
   #hero {
     height: 100vh;
+
+    .hero-brand {     
+      height: 50px;
+    }
   }
 }
 
@@ -386,7 +414,7 @@ header {
   display: block;
   height: 500px;
   width: 100vw;
-  background-image: url('../public/bg_generic_1.jpeg');
+  background-image: url('../public/bg_generic_1.jpg');
   background-position-x: 50%;
   background-position-y: 50%;
   background-repeat: no-repeat;
@@ -477,6 +505,8 @@ header {
     padding: 25px;
     padding-top: 0;
     margin-bottom: 30px;
+    width: 50%;
+    filter: invert(100%);
   }
 
   #doctor-img-doctor {
@@ -492,9 +522,16 @@ header {
 
   .doctor-brands {
     align-self: center;
-    max-width: 100%;
-    max-height: 70px;
-    height: auto;
+    width: auto;
+    height: 40px;
+  }
+}
+
+@media (min-width: 480px) {
+  #doctor {
+    .doctor-brands {
+      height: 70px;
+    }
   }
 }
 
@@ -503,6 +540,10 @@ header {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 67.79%, rgba(0, 0, 0, 0.6) 100%), url(../public/doctor_lg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    .doctor-brands {
+      height: 90px;
+    }
   }
 }
 
@@ -713,7 +754,7 @@ header {
   display: block;
   height: 500px;
   width: 100vw;
-  background-image: url('../public/bg_generic_2.jpeg');
+  background-image: url('../public/bg_generic_2.jpg');
   background-position-x: 100%;
   background-position-y: 50%;
   background-repeat: no-repeat;
@@ -729,7 +770,7 @@ header {
 
 #social-media {
   height: 300px;
-  background-image: url('../public/bg_social_media.jpeg');
+  background-image: url('../public/bg_social_media.jpg');
   background-position-x: 50%;
   background-position-y: 100%;
   background-repeat: no-repeat;
@@ -844,7 +885,7 @@ header {
 }
 
 #contact {
-  background-image: url(../public/bg-contact.jpeg);
+  background-image: url(../public/bg_contact.webp);
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 100%;
@@ -859,9 +900,9 @@ header {
     padding: 40px;
 
     #contact-logo {
-      max-height: 70px;
       height: auto;
-      width: 100%;
+      width: 30%;
+      filter: invert(100%);
     }
     
     .btn-base { 
@@ -878,6 +919,10 @@ header {
     padding: 100px 50px;
     #contact-content {
       padding: 50px;
+
+      #contact-logo {
+        width: 50%;
+      }
     }
   }
 }
