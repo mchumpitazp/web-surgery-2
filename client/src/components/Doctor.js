@@ -27,10 +27,10 @@ function Doctor () {
                     <img id="doctor-img-doctor" src="./doctor.jpg" alt="doctor" className="img-fluid w-100 h-auto d-lg-none"/>
 
                     <p>
-                        Double-board certified <strong>Atlanta plastic surgeon</strong>, Dr. Nicholas Jones is certified by the American Board of Plastic Surgery and, specializing in both aesthetic and reconstructive surgery.
+                        Double-board certified <strong>Florida plastic surgeon</strong>, Dr. Yates is certified by the American Board of Plastic Surgery and, specializing in both aesthetic and reconstructive surgery.
                     </p>
                     <p id="p-smaller">
-                        Dr. Jones has a philosophy of providing high quality aesthetic and functional results while maintaining the utmost professionalism, safety, and comfort. Dr. Jones graduated general surgery training at Albert Einstein Medical Center and went on to plastic surgery training at the Medical College of Georgia. After graduating with full certification, he completed an internship with Dr. Marcelo Araujo, a world-renowned cosmetic surgeon in Sao Paulo, Brazil.
+                        Dr. Yates has a philosophy of providing high quality aesthetic and functional results while maintaining the utmost professionalism, safety, and comfort. Dr. Jones graduated general surgery training at Albert Einstein Medical Center and went on to plastic surgery training at the Medical College of Georgia. After graduating with full certification, he completed an internship with Dr. Marcelo Araujo, a world-renowned cosmetic surgeon in Sao Paulo, Brazil.
                     </p>
                     
                     <Button className="btn-base me-4">
